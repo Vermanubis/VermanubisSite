@@ -8,6 +8,11 @@ html
 
 body 
 { 
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/T7F.png");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	opacity: 0; 
 	transition: opacity 2s; 
 	font-family: Arial Black;
@@ -16,9 +21,9 @@ body
 	overflow-x: hidden;
 } 
 
-@media only screen and (max-device-width: 1366px) 
+@media only screen and (max-device-width: 480px) 
 {
-	#parallax2, #parallax3, #parallax4, #parallax5, #parallax6, #parallax7
+	body
 	{
 		background-attachment: scroll;
 	}
@@ -192,30 +197,8 @@ input[type=submit]
 	transform: translate(-50%, -50%)
 }
 
-#parallax2
+#parallax2, #parallax3, #parallax4, #parallax5, #parallax6, #parallax7
 {
-
-	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/T7F.png");
-	min-height: 100%;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-#parallax3
-{	
-	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/Shanoa.jpg");
-	min-height: 100%;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-#parallax4
-{	
-	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/T7F.png");
 	min-height: 100%;
 	background-attachment: fixed;
 	background-position: center;
@@ -225,33 +208,10 @@ input[type=submit]
 
 #parallax5
 {	
-	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/Shanoa.jpg");
-	min-height: 100%;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	transition: min-height 0.2s ease-out; 
 }
 
-#parallax6
-{	
-	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/T7F.png");
-	min-height: 100%;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
 
-#parallax7
-{	
-	background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/Shanoa.jpg");
-	min-height: 100%;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
 
 .container
 {
@@ -280,6 +240,12 @@ input[type=submit]
 	transition: 0.4s;
 }
 
+.accordion:after
+{
+	content: '\002B';
+	float: right;
+}
+
 .panel 
 {
 	left: 14%;
@@ -299,6 +265,12 @@ input[type=submit]
 .active, .accordion:hover 
 {
 	background-color: #38285C;
+}
+
+.active:after
+{
+	content: '\2212';
+	float: right;
 }
 
 /*******NAVBAR*******/

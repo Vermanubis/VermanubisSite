@@ -25,6 +25,7 @@
 <body onload="document.body.style.opacity='1'">
 
 
+
 	<div class="navbar" id="navbar">
 		<div class="navbarwrapper" id="navbarwrapper">
 			<div class="navbarcontents">
@@ -152,8 +153,8 @@
 						I’m very flexible with pricing as well as pricing models, and we’ll talk both out right at the start 
 						so you don’t have to wake up in cold sweats at night wondering about costs. If pay-per-minute freaks 
 						you out a bit, I’m happy to do — and personally quite like — the pay-per-project model. Whatever the model, however, 
-						I take deeply personal pride in the quality of my music, so my concern is making music that’s everything 
-						it should be over optimizing my time:money ratio.</p>
+						I take deeply personal pride in my music, so my concern is making music that will 
+						leave a lasting legacy, not optimizing my time:money ratio.</p>
 					</div>
 
 				<button class="accordion">Q: “What genres can you do?”</button>
@@ -168,7 +169,7 @@
 					<div class="panel">
 						<p>A: In my music demo, the songs are produced with live orchestral samples, but this sound has less to do with the
 						music itself and more with the soundfont. I can adjust my compositions to any soundfont you think will fit your game, be it 
-						something like the old SNES soundfonts or live orchestra samples.</p>
+						something reminiscent of the old SNES soundfonts or something modern like live orchestra samples.</p>
 					</div>
 					
 				<button class="accordion">Q: “Can I hire you for individual commissions/songs?”</button>
@@ -242,7 +243,8 @@
 	</a>
 
 	
-	<script>
+<script>
+
 	var myNav = document.getElementById('navbar');
 	var myNavWrap = document.getElementById('navbarwrapper');
 	var mySocialWrap = document.getElementById('socialwrapper');
@@ -286,7 +288,7 @@
 	
 	  acc[i].onclick = function() 
 	  {
-		if(activePanel == this)
+		/*if(activePanel == this)
 		{
 			toggleItem(activePanel);
 			activePanel = null;
@@ -296,10 +298,10 @@
 		if(activePanel != null)
 		{
 			toggleItem(activePanel);
-		}
+		}*/
 
 		toggleItem(this);
-		activePanel = this;  
+		//activePanel = this;  
 	  }
 	}
 	  	  
@@ -313,11 +315,15 @@
 		if (panel.style.maxHeight) //panel is open, now close it
 		{
 			panel.style.maxHeight = null;
+			document.getElementById("parallax5").style.minHeight = 
+				document.getElementById("parallax5").offsetHeight - panel.scrollHeight + "px";
 		} 
 		else //panel is closed, now open it
 		{
 			panel.style.maxHeight = panel.scrollHeight + "px";
-		}
+			document.getElementById("parallax5").style.minHeight = 
+				document.getElementById("parallax5").offsetHeight + panel.scrollHeight + "px";
+		} 
 	};
 	
 	
@@ -326,7 +332,7 @@
   
 	  
 	
-	</script>
+</script>
 	
 </body>
 </html>
