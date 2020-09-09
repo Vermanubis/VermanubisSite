@@ -28,8 +28,8 @@
 	<div class="navbar" id="navbar">
 		<div class="navbarwrapper" id="navbarwrapper">
 			<div class="navbarcontents">
-				<a href="#top" >Home</a>
-				<a href="#musicbox" id="#musicbox">Music</a>
+				<a href="#top">Home</a>
+				<a href="#musicbox">Music</a>
 				<a href="#what i do">What I Do</a>
 				<a href="#faq">FAQ</a>
 				<a href="#about">About</a>
@@ -67,18 +67,17 @@
 				</div>
 				
 				<div id="musictext">
-					<p>1. The Mount of All Creation.....(intrepid, determined)<span style="color:red">***</span></p>
+					<p>1. The Mount of All Creation.....(intrepid, determined)</p>
 					<p>2. Bygone Days and the Distant Shore.....(nostalgic, peaceful)</p>
 					<p>3. The Forest of Sleep and the Grotto of the Dream Fish.....(rainy, dreamy)</p>
-					<p>4. October Rust and the Beyondless Horizon.....(epic, adventurous)<span style="color:red">***</span></p>
+					<p>4. October Rust and the Beyondless Horizon.....(epic, adventurous)</p>
 					<p>5. The Storm That Broke the World in Two.....(snowy, dark)</p>
-					<p>6. Kriegsgeist.....(confident, battle theme)<span style="color:red">***</span></p>
-					<p>7. The Ocean at the End of the Earth.....(bright, longing)<span style="color:red">***</span> </p>
+					<p>6. Kriegsgeist.....(confident, battle theme)</p>
+					<p>7. The Ocean at the End of the Earth.....(bright, longing) </p>
 					<p>8. Prélude d'un Coeur Brisé.....(sentimental, bittersweet)</p>
-					<p>9. Le Ali della Redenzione.....(redemptive, proud)<span style="color:red">***</span></p>
+					<p>9. Le Ali della Redenzione.....(redemptive, proud)</p>
 					<p>10. Grief, My Sword.....(angry, sorrowful)</p>
 					<p>11. Hope, My Shield.....(hopeful, healing)</p>
-					<p style="color: red">*** = personal favorites</p>
 				</div> 
 				
 				<div id="musicplayer">
@@ -103,13 +102,13 @@
 				</div>
 				
 				<div id="compositiontext">
-					<p>I specialize in (but of course am not limited to) JRPG-style music of the 90s and 00s, which is to say, highly melodic and narrative-driven 
+					<p>I specialize in (but of course am not limited to) JRPG-style music, which is to say, highly melodic and narrative-driven 
 					music in the style of Final Fantasy, the Chrono series, Tales series and so on. What made these games special wasn’t just that 
 					their music was good; their music had an identity.
 					</p>
 
 					<p>Likewise, my standard is to make music that is a selling point and integral part of the identity of the games I work on, not just 
-					pleasant but forgettable background noise. I strive to make music that will help your game become a cherished and
+					inoffensive but forgettable background noise. I strive to make music that will help your game become a cherished and
 					significant emotional experience for its players.
 					</p>
 				</div>
@@ -184,11 +183,11 @@
 		<div id="parallax6">
 			<div class="container">
 				<div class="header">
-					About
+					<p>About<p>
 				</div>
-				
-				<div id="aboutphotocontainer"></div>
 					
+				<div id="aboutphotocontainer"></div>
+				
 				<div id="aboutmetext">
 					<p>My name’s Geoff Butterworth, also known as Vermanubis, and it’s a pleasure to meet you. </p>
 					
@@ -216,25 +215,27 @@
 					<p>Contact</p>
 				</div>
 				
-					<form action="{% url 'contact' %}" method="post" style="margin: 0; padding: 0;">
+					<form action="{% url 'contact' %}#contact" method="post" style="margin: 0">
 					{% csrf_token %}
 					
-					<div id="messagefields">
-						<input type="text" id="message-name" name="message-name" placeholder="Your name?">
+						<div id="messagefields">
 
-						<input type="text" id="message-email" name="message-email" placeholder="Your email?">
+							<input type="text" id="message-name" name="message-name" placeholder="Your name?">
 
-						<textarea id="message" name="message" placeholder="Write here..." style="height:200px"></textarea>
+							<input type="text" id="message-email" name="message-email" placeholder="Your email?">
 
-						<input type="submit" value="Message me!" style="font-family: Arial Black">	
-					</div>
+							<textarea id="message" name="message" placeholder="Write here..." style="height:200px"></textarea>
+
+							<input type="submit" value="Message me!" style="font-family: Arial Black">
+							
+						</div>	
 						
 						<div id="contacttext">
-							Since about that age it's been my life's work to understand and perfect what makes game music so special
+							<p>Since about that age it's been my life's work to understand and perfect what makes game music so special
 							and to get others to feel what my most beloved games made me feel in my own work. If you can see that fact 
 							reflected in my work and want music that will stay with your players forever, I can't overstate
 							how happy I'd be to oblige and work with you to make something that'll mean something to people.
-							
+							</p>
 						</div>
 					</form>
 			</div>
@@ -246,11 +247,10 @@
 	var myNav = document.getElementById('navbar');
 	var myNavWrap = document.getElementById('navbarwrapper');
 	var mySocialWrap = document.getElementById('socialwrapper');
-	
 	window.onscroll = function () 
 	{	 
 		"use strict";
-		if (document.documentElement.scrollTop >= 100 )
+		if (document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100 )
 		{
 			myNav.classList.add("navbar-scrolled");
 			myNav.classList.remove("navbar");
@@ -265,16 +265,6 @@
 			myNavWrap.classList.remove("navbarwrapper-scrolled");
 			
 		}
-		/*if (scrollPos >= document.getElementById("parallax3").offsetTop
-			&& scrollPos <= document.getElementById("parallax4").offsetTop)
-		{
-			document.getElementById("#musicbox").style.color = "red";
-		}
-		else
-		{
-			document.getElementById("#musicbox").style.color = "#f2f2f2";
-		}
-		*/
 	};
 	
 	var acc = document.getElementsByClassName("accordion");
@@ -299,18 +289,19 @@
 		}
 
 		toggleItem(this);
-		activePanel = this;  
+		activePanel = this;
+	  
 	  }
 	}
 	  	  
-	function toggleItem(item)
-	{
+	  function toggleItem(item)
+	  {
 		item.classList.toggle("active");
-
-	/* Toggle between hiding and showing the active panel */
+		
+		/* Toggle between hiding and showing the active panel */
 		var panel = item.nextElementSibling;
-
-		if (panel.style.maxHeight) //panel is open, now close it
+		
+		if (panel.style.maxHeight != 0) //panel is open, now close it
 		{
 			panel.style.maxHeight = null;
 		} 
@@ -318,13 +309,7 @@
 		{
 			panel.style.maxHeight = panel.scrollHeight + "px";
 		}
-	};
-	
-	
-  
-	
-  
-	  
+	  };
 	
 	</script>
 	
