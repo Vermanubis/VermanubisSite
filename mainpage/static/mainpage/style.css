@@ -34,6 +34,7 @@ body
 	
 #logo
 {
+
 	color: #F2F2F2;
 	font-size: 3vw;
 	opacity: 1;
@@ -239,8 +240,8 @@ input[type=submit]
 	position: relative;
 	left: 51%;
 	transform: translate(-51.5%, 25%);
-	height: 600px;
-	width: 1275px;
+	height: 62%;
+	width: 66.4%;
 }
 
 .accordion 
