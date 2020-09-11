@@ -31,67 +31,53 @@ body
 	
 #logo
 {
-
 	color: #F2F2F2;
-	font-size: 3vw;
+	font-size: 58px;
 	opacity: 1;
+	text-align: center;
 	transition: opacity 1s;
 }
 
 #sublogo
 {
 	color: #F2F2F2;
-	font-size: 2.7vw;
+	font-size: 52px;
 	opacity: 1;
+	text-align: center;
 	transition: opacity 1s;
 }
 
 #logoflexbox
 {
-	transform: translate(25%, 25%);
+	transform: translate(0%, 25%);
 	height: 62%;
-	width: 66.4%;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-#contactnotice
-{
-	text-align: center;
-	color: #F2F2F2;
-	font-size: 2.7vw;
-	position: absolute;
-	opacity: 1;
-	transition: opacity 1s;
-}
-
 /*******MUSIC*******/
 
 #musictext
 {
-	transform: translate(0%, 25%);
 	color: #F2F2F2;
-	height: 48.7vh;
-	font-size: 0.9vw;
-
+	height: 560px;
+	overflow-y: auto;
+	font-size: 18px;
 }
 
-#musicplayer
-{
-	transform: translate(0%, 25%);
-}
+
 
 /*******WHATIDO*******/
 
 #compositiontext
 {
 	color: #F2F2F2;
-	font-size: 0.94vw;
+	font-size: 18px;
 	text-align: justify;
-	width: 49.5vw;
-	transform: translate(0%, 45%);
+	width: 950px;
 	overflow-y: auto;
 }
 
@@ -101,10 +87,9 @@ body
 {
 	display: inline-block;
 	position: relative;
-	left: 51%;
-	transform: translate(-51.5%, 25%);
-	height: 600px;
-	width: 1275px;
+	transform: translate(0%, 145px);
+	height: 62%;
+	width: 100%;
 }
 
 #accordioncontainer
@@ -115,7 +100,6 @@ body
 	left: 430px;
 }
 
-
 /*******ABOUT*******/
 
 #aboutphotocontainer
@@ -123,21 +107,22 @@ body
 	background-image: url("images/me.png");
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 100% 100%;
 	border-radius: 5%;
-	width: 23.5vw;
-	height: 50.4vh;
-	transform: translate(0%, 22%);
+	width: 35%;
+	height: 50%;
+	transform: translate(0%, 15%);
 
 }
 
 #aboutmetext
 {
 	color: #F2F2F2;
-	font-size: 0.93vw;
+	font-size: 18px;
 	text-align: justify;
 	width: 35%;
-	transform: translate(0%, 15%);
+	height: 700px;
+	overflow-y: auto;
 }
 
 /*******CONTACT*******/
@@ -146,24 +131,23 @@ body
 {
 	display: flex;
 	flex-direction: column;
-	transform: translate(0%, 25%);
 }
 
 form
 {
-	width: 35vw;
+	width: 950px;
 }
 
 input[type=text], textarea
 {
   font-family: Arial Black;
-  font-size: 0.83vw;
-  height: 5vh;
-  padding: 0.625vw 2.06vh;
-  margin: 0.42vw 0;
+  font-size: 16px;
+  height: 48px;
+  padding: 12px 20px;
+  margin: 8px 0;
   box-sizing: border-box;
   border: none;
-  border-radius: 0.41vw;
+  border-radius: 8px;
   background-color: #f2f2f2;
   color: #4C408E;
 }
@@ -185,7 +169,7 @@ input[type=submit]
 
 .container
 {
-	transform: translate(25%, 25%);
+	transform: translate(25%, 48px);
 	height: 62%;
 	width: 66.4%;
 	display: flex;
@@ -194,46 +178,32 @@ input[type=submit]
 
 .container2
 {
-	transform: translate(25%, 25%);
-	height: 62%;
-	width: 66.4%;
+	transform: translate(0%, 25%);
+	height: 80%;
+	width: 100vw;
 	display: flex;
 	justify-content: center;
 }
 
+
 .header
 {
+	margin-top: 97px;
 	display: flex;
-	width: 100%;
+	width: 100vw;
 	color: #F2F2F2;
-	font-size: 4.8vw;
-	transform: translate(0%, 15vh);
+	font-size: 92px;
 	justify-content: center;
 }
 
 #parallax2, #parallax3, #parallax4, #parallax5, #parallax6, #parallax7
 {
-	min-height: 100vh;	
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	border: 2px solid red;
+	min-height: 1000px;	
 }
 
 #parallax5
 {	
 	transition: min-height 0.2s ease-out; 
-}
-
-#faqcontainer
-{
-	display: inline-block;
-	position: relative;
-	left: 51%;
-	transform: translate(-51.5%, 25%);
-	height: 600px;
-	width: 1275px;
 }
 
 .accordion 
@@ -242,12 +212,12 @@ input[type=submit]
 	color: #F2F2F2;
 	cursor: pointer;
 	font-size: 18px;
+	left: 50%;
+	transform: translateX(-50%);
 	padding: 18px;
 	font-family: Arial Black;
 	width: 950px;
-	top: 150px;
 	position: relative;
-	left: 14%;
 	text-align: center;
 	border: none;
 	outline: none;
@@ -262,11 +232,10 @@ input[type=submit]
 
 .panel 
 {
-	left: 14%;
-	font-family: Arial Black;
 	position: relative;
-	top: 150px;
 	color: #4C408E;
+	left: 50%;
+	transform: translateX(-50%);
 	width: 920px;
 	padding: 0px 15px;
 	text-align: justify;

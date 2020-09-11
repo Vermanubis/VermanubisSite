@@ -10,7 +10,6 @@
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		
-			
 		<style>
 			.fa-twitter 
 			{
@@ -18,13 +17,10 @@
 				color: white;
 			}
 		</style>
-	
-		
+
 	</head>
 
 <body onload="document.body.style.opacity='1', logoReturn()">
-
-
 
 	<div class="navbar" id="navbar">
 		<div class="navbarwrapper" id="navbarwrapper">
@@ -41,10 +37,10 @@
 				<a href="https://vermanubis.bandcamp.com/" style="font-size: 1.6vw;" 
 				class="fa fa-bandcamp"></a>
 			</div>
-		
 		</div>
-		
 	</div>
+	
+	<!-- LOGO/HOME SECTION -->
 	
 	<a name="home">
 		<div id="parallax2">
@@ -73,6 +69,8 @@
 		
 	</a>
 	
+	<!-- MUSIC SECTION -->
+	
 	 <a name="musicbox">
 		
 		<div id="parallax3">
@@ -80,9 +78,9 @@
 					Music
 				</div>
 			<div class="container">
-				
+
 				<div id="musictext">
-					<p>1. The Mount of All Creation.....(intrepid, determined)<span style="color:red">***</span></p>
+					1. The Mount of All Creation.....(intrepid, determined)<span style="color:red">***</span>
 					<p>2. Bygone Days and the Distant Shore.....(nostalgic, peaceful)</p>
 					<p>3. The Forest of Sleep and the Grotto of the Dream Fish.....(rainy, dreamy)</p>
 					<p>4. October Rust and the Beyondless Horizon.....(epic, adventurous)<span style="color:red">***</span></p>
@@ -96,14 +94,13 @@
 					<p style="color: red">*** = personal favorites</p>
 				</div> 
 				
-				<div id="musicplayer">
-					<iframe style="border: 0; width: 20.83vw; height: 48.7vh;" src="https://bandcamp.com/EmbeddedPlayer/album=4108436490/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/track=3719625420/transparent=true/" 
-					seamless><a href="http://vermanubis.bandcamp.com/album/the-seventh-fonon">The Seventh Fonon by Vermanubis</a></iframe>
-				</div>
+				<iframe style="border: 0; width: 400px; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album=4108436490/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/track=3719625420/transparent=true/" 
+				seamless><a href="http://vermanubis.bandcamp.com/album/the-seventh-fonon">The Seventh Fonon by Vermanubis</a></iframe>
 			</div>
 		</div>
 	</a>
 	
+	<!-- WHAT I DO SECTION -->
 	
 	<a name="what i do">
 		<div id="parallax4">
@@ -127,12 +124,14 @@
 		</div>
 	</a>
 	
+	<!-- FAQ SECTION -->
+	
 	<a name="faq">
 		<div id="parallax5"> 
-			<div id="container2">
 				<div class="header">
 					FAQ
 				</div>
+			<div id="faqcontainer">
 				<button class="accordion">Q: “How do I know I’ll get exactly what I’m looking for?”</button>
 					<div class="panel">
 						<p><b>A:</b> Of course, liking what you heard in the Music section above is a great start, 
@@ -176,6 +175,8 @@
 			</div>
 		</div>
 	</a>
+	
+	<!-- ABOUT SECTION -->
 
 	<a name="about">
 		<div id="parallax6">
@@ -206,17 +207,19 @@
 		</div>
 	</a>
 	
+	<!-- CONTACT SECTION -->
+	
 	<a name="contact">
 		<div id="parallax7">
+		
 			<div class="header">
-					<p>Contact</p>
-				</div>
+				Contact
+			</div>
+			
 			<div class="container2">
+				<form action="{% url 'contact' %}" method="post" style="margin: 0; padding: 0;">
+				{% csrf_token %}
 				
-				
-					<form action="{% url 'contact' %}" method="post" style="margin: 0; padding: 0;">
-					{% csrf_token %}
-					
 					<div id="messagefields">
 						<input type="text" id="message-name" name="message-name" placeholder="Your name?">
 
@@ -226,8 +229,7 @@
 
 						<input type="submit" value="Message me!" style="font-family: Arial Black">	
 					</div>
-
-					</form>
+				</form>
 			</div>
 		</div>
 	</a>
@@ -336,11 +338,10 @@
 			
 			
 			//var logo = document.styleSheets.
-			//document.getElementById("first").appendChild(document.getElementById("logo"));
-
-			
+			//document.getElementById("first").appendChild(document.getElementById("logo"));	
 		}
 	};
+	
 </script>
 	
 </body>
