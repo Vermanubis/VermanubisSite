@@ -36,9 +36,9 @@
 				<a href="#about">About</a>
 				<a href="#contact">Contact</a>	
 			
-				<a href="https://www.twitter.com/Vermanubis" style="font-size: 32px;" 
+				<a href="https://www.twitter.com/Vermanubis" style="font-size: 1.6vw;" 
 				class="fa fa-twitter"></a>
-				<a href="https://vermanubis.bandcamp.com/" style="font-size: 32px;" 
+				<a href="https://vermanubis.bandcamp.com/" style="font-size: 1.6vw;" 
 				class="fa fa-bandcamp"></a>
 			</div>
 		
@@ -48,7 +48,6 @@
 	
 	<a name="home">
 		<div id="parallax2">
-			
 			<div id="logoflexbox">
 		
 		{% if message_name %}
@@ -77,10 +76,10 @@
 	 <a name="musicbox">
 		
 		<div id="parallax3">
-			<div class="container">
 				<div class="header">
 					Music
 				</div>
+			<div class="container">
 				
 				<div id="musictext">
 					<p>1. The Mount of All Creation.....(intrepid, determined)<span style="color:red">***</span></p>
@@ -98,9 +97,9 @@
 				</div> 
 				
 				<div id="musicplayer">
-					<iframe style="border: 0; width: 400px; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album=4108436490/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/track=3719625420/transparent=true/" 
+					<iframe style="border: 0; width: 20.83vw; height: 48.7vh;" src="https://bandcamp.com/EmbeddedPlayer/album=4108436490/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/track=3719625420/transparent=true/" 
 					seamless><a href="http://vermanubis.bandcamp.com/album/the-seventh-fonon">The Seventh Fonon by Vermanubis</a></iframe>
-				</div>	
+				</div>
 			</div>
 		</div>
 	</a>
@@ -108,15 +107,10 @@
 	
 	<a name="what i do">
 		<div id="parallax4">
-			<div class="container">
-			
 				<div class="header">
-					<p>What I Do</p>
+					What I Do
 				</div>
-				
-				<div id ="compositionheader">
-					<p>Composition</p>
-				</div>
+			<div class="container2">
 				
 				<div id="compositiontext">
 					<p>I specialize in (but of course am not limited to) JRPG-style music of the 90s and 00s, which is to say, highly melodic and narrative-driven 
@@ -129,28 +123,15 @@
 					significant emotional experience for its players.
 					</p>
 				</div>
-				
-				<div id ="arrangementheader">
-					<p>Arrangement</p>
-				</div>
-				
-				<div id="arrangementtext">
-					<p>Do you have a song you've written that you'd like arranged for as a solo piano, orchestral or even symphonic rock piece,
-						but lack either the time or skills to do so?
-					</p>
-
-					<p>I can help with that.
-					</p>
-				</div>
 			</div>
 		</div>
 	</a>
 	
 	<a name="faq">
 		<div id="parallax5"> 
-			<div class="container">
+			<div id="container2">
 				<div class="header">
-					<p>FAQ</p>
+					FAQ
 				</div>
 				<button class="accordion">Q: “How do I know I’ll get exactly what I’m looking for?”</button>
 					<div class="panel">
@@ -180,7 +161,7 @@
 						you're unfamiliar.</p>
 					</div>
 					
-				<button class="accordion">Q: “What if I want something that sounds more like older games and less like a live orchestra?”</button>
+				<button class="accordion">Q: “What if I want something that sounds more like older games?”</button>
 					<div class="panel">
 						<p>A: In my music demo, the songs are produced with live orchestral samples, but this sound has less to do with the
 						music itself and more with the soundfont. I can adjust my compositions to any soundfont you think will fit your game, be it 
@@ -198,10 +179,10 @@
 
 	<a name="about">
 		<div id="parallax6">
-			<div class="container">
 				<div class="header">
 					About
 				</div>
+			<div class="container">
 				
 				<div id="aboutphotocontainer"></div>
 					
@@ -227,10 +208,11 @@
 	
 	<a name="contact">
 		<div id="parallax7">
-			<div class="container">
-				<div class="header">
+			<div class="header">
 					<p>Contact</p>
 				</div>
+			<div class="container2">
+				
 				
 					<form action="{% url 'contact' %}" method="post" style="margin: 0; padding: 0;">
 					{% csrf_token %}
@@ -244,14 +226,7 @@
 
 						<input type="submit" value="Message me!" style="font-family: Arial Black">	
 					</div>
-						
-						<div id="contacttext">
-							Since about that age it's been my life's work to understand and perfect what makes game music so special
-							and to get others to feel what my most beloved games made me feel in my own work. If you can see that fact 
-							reflected in my work and want music that will stay with your players forever, I can't overstate
-							how happy I'd be to oblige and work with you to make something that'll mean something to people.
-							
-						</div>
+
 					</form>
 			</div>
 		</div>
@@ -309,7 +284,6 @@
 			activePanel = null;
 			return;
 		}
-
 		if(activePanel != null)
 		{
 			toggleItem(activePanel);

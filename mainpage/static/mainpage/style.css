@@ -1,7 +1,5 @@
 html 
 {
-	font-family: Arial Black;
-	height: 100%;
 	margin: 0;
 	scroll-behavior: smooth;
 }
@@ -16,7 +14,6 @@ body
 	opacity: 0; 
 	transition: opacity 2s; 
 	font-family: Arial Black;
-	height: 100%;
 	margin: 0;
 	overflow-x: hidden;
 } 
@@ -74,60 +71,41 @@ body
 
 #musictext
 {
+	transform: translate(0%, 25%);
 	color: #F2F2F2;
-	position: absolute;
-	transform: translate(0%, 23%)
+	height: 48.7vh;
+	font-size: 0.9vw;
+
 }
 
 #musicplayer
 {
-	position: absolute;
-	transform: translate(100%, 25%);
-	left: 37.4%;
+	transform: translate(0%, 25%);
 }
 
 /*******WHATIDO*******/
 
-#arrangementtext
-{
-	color: #F2F2F2;
-	font-size: 18px;
-	position: absolute;
-	text-align: justify;
-	left: 65%;
-	transform: translate(0%, 180px);
-	width: 35%;
-}
-
 #compositiontext
 {
 	color: #F2F2F2;
-	font-size: 18px;
-	position: absolute;
+	font-size: 0.94vw;
 	text-align: justify;
-	transform: translate(0%, 180px);
-	width: 35%;
-}
-
-#arrangementheader
-{
-	color: #F2F2F2;
-	font-size: 45px;
-	position: absolute;
-	left: 70%;
-	transform: translate(0%, 30%)
-}
-
-#compositionheader
-{
-	color: #F2F2F2;
-	font-size: 45px;
-	position: absolute;
-	left: 6%;
-	transform: translate(0%, 30%)
+	width: 49.5vw;
+	transform: translate(0%, 45%);
+	overflow-y: auto;
 }
 
 /*******FAQ*******/
+
+#faqcontainer
+{
+	display: inline-block;
+	position: relative;
+	left: 51%;
+	transform: translate(-51.5%, 25%);
+	height: 600px;
+	width: 1275px;
+}
 
 #accordioncontainer
 {
@@ -144,23 +122,22 @@ body
 {
 	background-image: url("images/me.png");
 	background-position: center;
-	border-radius: 10px;
-	width: 450px;
-	height: 440px;
-	transform: translate(0%, 120px);
-	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 5%;
+	width: 23.5vw;
+	height: 50.4vh;
+	transform: translate(0%, 22%);
 
 }
 
 #aboutmetext
 {
 	color: #F2F2F2;
-	font-size: 18px;
-	position: absolute;
+	font-size: 0.93vw;
 	text-align: justify;
 	width: 35%;
-	left: 65%;
-	transform: translate(0%, -62%);
+	transform: translate(0%, 15%);
 }
 
 /*******CONTACT*******/
@@ -169,64 +146,79 @@ body
 {
 	display: flex;
 	flex-direction: column;
-	transform: translate(0%, 100px);
-}
-
-#contacttext
-{
-	color: #F2F2F2;
-	font-size: 18px;
-	position: absolute;
-	text-align: justify;
-	left: 65%;
-	transform: translate(0%, -112%);
-	width: 35%;
+	transform: translate(0%, 25%);
 }
 
 form
 {
-	display: inline-block;
-	width: 35%;
+	width: 35vw;
 }
 
 input[type=text], textarea
 {
   font-family: Arial Black;
-  padding: 12px 20px;
-  margin: 8px 0;
+  font-size: 0.83vw;
+  height: 5vh;
+  padding: 0.625vw 2.06vh;
+  margin: 0.42vw 0;
   box-sizing: border-box;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.41vw;
   background-color: #f2f2f2;
   color: #4C408E;
 }
 
+textarea
+{
+	height: 20.6vh !important;
+}
+
 input[type=submit]
 {
-	padding: 16px 32px;
+	font-size: 0.83vw;
+	padding: 0.83vw 3.3vh;
 	background-color: #4C408E;
 	color: #f2f2f2;
-	border-radius: 8px;
+	border-radius: 0.41vw;
 	cursor: pointer;
+}
+
+.container
+{
+	transform: translate(25%, 25%);
+	height: 62%;
+	width: 66.4%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.container2
+{
+	transform: translate(25%, 25%);
+	height: 62%;
+	width: 66.4%;
+	display: flex;
+	justify-content: center;
 }
 
 .header
 {
+	display: flex;
+	width: 100%;
 	color: #F2F2F2;
 	font-size: 4.8vw;
-	position: absolute;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, -50%)
+	transform: translate(0%, 15vh);
+	justify-content: center;
 }
 
 #parallax2, #parallax3, #parallax4, #parallax5, #parallax6, #parallax7
 {
-	min-height: 100%;
+	min-height: 100vh;	
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	border: 2px solid red;
 }
 
 #parallax5
@@ -234,14 +226,14 @@ input[type=submit]
 	transition: min-height 0.2s ease-out; 
 }
 
-.container
+#faqcontainer
 {
 	display: inline-block;
 	position: relative;
 	left: 51%;
 	transform: translate(-51.5%, 25%);
-	height: 62%;
-	width: 66.4%;
+	height: 600px;
+	width: 1275px;
 }
 
 .accordion 
@@ -333,7 +325,7 @@ input[type=submit]
 .navbarcontents
 {
 	display: flex;
-	width: 1275px;
+	width: 66.4vw;
 	justify-content: space-between;
 }
 
@@ -346,13 +338,13 @@ input[type=submit]
 
 .navbarwrapper a
 {
-	font-size: 20px;
+	font-size: 1.042vw;
 	color: #F2F2F2;
 	text-align: center;
-	padding: 18px 0px;
+	padding: 0.938vw 0px;
 	text-decoration: none;
-	transition: 0.4s;
-	left: 621px;
+	transition: color 0.4s;
+	left: 32.34vw;
 }
 
 .navbar a:hover
@@ -362,12 +354,12 @@ input[type=submit]
 
 .navbarwrapper-scrolled a
 {	
-	font-size: 20px;
+	font-size: 1.042vw;
 	color: #F2F2F2;
 	text-align: center;
-	padding: 18px 0px;
+	padding: 0.938vw 0px;
 	text-decoration: none;
-	transition: 0.4s;
+	transition: color 0.4s;
 }
 
 .navbarwrapper-scrolled a:hover
@@ -375,5 +367,3 @@ input[type=submit]
 	color: #b2aebc;
 }
 
-
-	
