@@ -66,6 +66,12 @@ body
 	height: 560px;
 	overflow-y: auto;
 	font-size: 18px;
+	transform: translate(0%, 100px);
+}
+
+#musicplayer
+{
+	transform: translate(0%, 100px);	
 }
 
 
@@ -74,6 +80,7 @@ body
 
 #compositiontext
 {
+	transform: translate(0%, 100px);
 	color: #F2F2F2;
 	font-size: 18px;
 	text-align: justify;
@@ -117,6 +124,7 @@ body
 
 #aboutmetext
 {
+	transform: translate(0%, 100px);
 	color: #F2F2F2;
 	font-size: 18px;
 	text-align: justify;
@@ -129,6 +137,7 @@ body
 
 #messagefields
 {
+	transform: translate(0%, 100px);
 	display: flex;
 	flex-direction: column;
 }
@@ -188,7 +197,8 @@ input[type=submit]
 
 .header
 {
-	margin-top: 97px;
+	transform: translate(0%, 100px);
+	margin-top: 0px;
 	display: flex;
 	width: 100vw;
 	color: #F2F2F2;
