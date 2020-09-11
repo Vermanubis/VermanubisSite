@@ -16,6 +16,8 @@ def contact(request):
         msg = EmailMessage(message_name, message, message_email, to=['vermanubis1@gmail.com'])
         msg.send()
         
+        print(message_email)
+        
         return render(request, 'mainpage/mainpage.html', {'message_name' : message_name})
         
     else:

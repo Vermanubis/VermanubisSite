@@ -5,18 +5,9 @@
 	<head>
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="{% static 'mainpage\style.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'mainpage\mainstyle.css' %}">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		
-		<style>
-			.fa-twitter 
-			{
-				background: transparent;
-				color: white;
-			}
-		</style>
 
 	</head>
 
@@ -46,7 +37,10 @@
 		<div id="parallax2">
 			<div id="logoflexbox">
 		
-		{% if message_name %}
+		{% if message_name %} 
+		
+		<!-- SHOW NOTICE MESSAGE -->
+		
 				<div id="logo" style="display:none">
 					<h1>Vermanubis Music</h1>
 				</div>
@@ -55,7 +49,10 @@
 					<p id="sublogotext">Hey, {{message_name}}. Thanks for the email. I'll get up with you shortly.</p>
 				</div>
 			
-		{% else %}
+		{% else %} 
+		
+		<!-- SHOW LOGO -->
+		
 				<div id="logo">
 					<h1>Vermanubis Music</h1>
 				</div>
@@ -109,8 +106,7 @@
 				<div class="header">
 					What I Do
 				</div>
-			<div class="container2">
-				
+			<div class="container2">	
 				<div id="compositiontext">
 					I specialize in (but of course am not limited to) JRPG-style music of the 90s and 00s, which is to say, highly melodic and narrative-driven 
 					music in the style of Final Fantasy, the Chrono series, Tales series and so on. What made these games special wasn’t just that 
@@ -146,12 +142,12 @@
 
 				<button class="accordion">Q: “What are your prices/how do you pricing?”</button>
 					<div class="panel">
-						<p>A: It's very difficult to give a flat rate because projects vary so wildly, but
+						<p>A: It's a little difficult to give a flat rate because projects vary so wildly, but
 						I’m very flexible with pricing as well as pricing models, and we’ll talk both out right at the start 
 						so you don’t have to wake up in cold sweats at night wondering about costs. If pay-per-minute freaks 
 						you out a bit, I’m happy to do — and personally quite like — the pay-per-project model. Whatever the model, however, 
-						I take deeply personal pride in my music, so my concern is making music that will 
-						leave a lasting legacy, not optimizing my time:money ratio.</p>
+						the quality of my music is deeply personal to me, so my concern is making music that will 
+						carve a lasting legacy for your game, not optimizing my time:money ratio.</p>
 					</div>
 
 				<button class="accordion">Q: “What genres can you do?”</button>
@@ -187,10 +183,11 @@
 				</div>
 			<div class="container">
 				
-				<div id="aboutphotocontainer"></div>
+				<image class="aboutphotocontainer" src="{% static 'mainpage\images\me.png' %}">
+				</image>
 					
 				<div id="aboutmetext">
-					<p>My name’s Geoff Butterworth, also known as Vermanubis, and it’s a pleasure to meet you. </p>
+					My name’s Geoff Butterworth, also known as Vermanubis, and it’s a pleasure to meet you.
 					
 					<p>Game music has been my life since I was 5 years old 
 					when I would play all the way through Final Fantasy: Mystic Quest just to jam to the final dungeon theme.
@@ -201,7 +198,7 @@
 					<p>Since about that age it's been my life's work to understand and perfect what makes game music so special
 					and to get others to feel what my most beloved games made me feel in my own work. If you can see that fact 
 					reflected in my work and want music that will stay with your players forever, I can't overstate
-					how happy I'd be to oblige and work with you to make something that'll mean something to people.
+					how happy I'd be to work with you to make something that'll mean something to people.
 					</p>
 				</div>
 			</div>
@@ -241,38 +238,26 @@
 	
 <script>
 
-	var myNav = document.getElementById('navbar');
-	var myNavWrap = document.getElementById('navbarwrapper');
-	var mySocialWrap = document.getElementById('socialwrapper');
+	var navBar = document.getElementById('navbar');
+	var navWrap = document.getElementById('navbarwrapper');
 	
 	window.onscroll = function () 
 	{	 
 		"use strict";
-		if (document.documentElement.scrollTop >= 100 )
+		if (document.documentElement.scrollTop >= 100 ) //if scrolled from very top
 		{
-			myNav.classList.add("navbar-scrolled");
-			myNav.classList.remove("navbar");
-			myNavWrap.classList.add("navbarwrapper-scrolled");
-			myNavWrap.classList.remove("navbarwrapper");
+			navBar.classList.add("navbar-scrolled");
+			navBar.classList.remove("navbar");
+			navWrap.classList.add("navbarwrapper-scrolled");
+			navWrap.classList.remove("navbarwrapper");
 		} 
-		else 
+		else //you're at the top
 		{
-			myNav.classList.add("navbar");
-			myNav.classList.remove("navbar-scrolled");
-			myNavWrap.classList.add("navbarwrapper");
-			myNavWrap.classList.remove("navbarwrapper-scrolled");
-			
+			navBar.classList.add("navbar");
+			navBar.classList.remove("navbar-scrolled");
+			navWrap.classList.add("navbarwrapper");
+			navWrap.classList.remove("navbarwrapper-scrolled");
 		}
-		/*if (scrollPos >= document.getElementById("parallax3").offsetTop
-			&& scrollPos <= document.getElementById("parallax4").offsetTop)
-		{
-			document.getElementById("#musicbox").style.color = "red";
-		}
-		else
-		{
-			document.getElementById("#musicbox").style.color = "#f2f2f2";
-		}
-		*/
 	};
 	
 	var acc = document.getElementsByClassName("accordion");
@@ -281,22 +266,9 @@
 
 	for (i = 0; i < acc.length; i++) 
 	{
-	
 	  acc[i].onclick = function() 
 	  {
-		/*if(activePanel == this)
-		{
-			toggleItem(activePanel);
-			activePanel = null;
-			return;
-		}
-		if(activePanel != null)
-		{
-			toggleItem(activePanel);
-		}*/
-
 		toggleItem(this);
-		//activePanel = this;  
 	  }
 	}
 	  	  
@@ -304,16 +276,16 @@
 	{
 		item.classList.toggle("active");
 
-	/* Toggle between hiding and showing the active panel */
+		/* Toggle between hiding and showing the active panel */
 		var panel = item.nextElementSibling;
 
-		if (panel.style.maxHeight) //panel is open, now close it
+		if (panel.style.maxHeight) //panel is open, now close and adjust div height
 		{
 			panel.style.maxHeight = null;
 			document.getElementById("parallax5").style.minHeight = 
 				document.getElementById("parallax5").offsetHeight - panel.scrollHeight + "px";
 		} 
-		else //panel is closed, now open it
+		else //panel is closed, now open it and adjust div height
 		{
 			panel.style.maxHeight = panel.scrollHeight + "px";
 			document.getElementById("parallax5").style.minHeight = 
@@ -330,7 +302,7 @@
 			let promise = new Promise((resolve, reject) => {
 			setTimeout(function(){
 				sublogo.style.opacity = 0;
-				resolve("done");}, 5000)
+				resolve("done");}, 7000) //wait 7 seconds to fade message out for logo fadein
 			});
 			
 			let result = await promise;

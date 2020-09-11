@@ -84,7 +84,7 @@ body
 	color: #F2F2F2;
 	font-size: 18px;
 	text-align: justify;
-	width: 650px;
+	width: 675px;
 	overflow-y: auto;
 }
 
@@ -94,7 +94,7 @@ body
 {
 	display: inline-block;
 	position: relative;
-	transform: translate(0%, 145px);
+	transform: translate(0%, 165px);
 	height: 62%;
 	width: 100%;
 }
@@ -109,17 +109,12 @@ body
 
 /*******ABOUT*******/
 
-#aboutphotocontainer
+.aboutphotocontainer
 {
-	background-image: url("images/me.png");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	transform: translate(0%, 100px);
 	border-radius: 5%;
-	width: 35%;
-	height: 50%;
-	transform: translate(0%, 15%);
-
+	width: 470px;
+	height: 400px;
 }
 
 #aboutmetext
@@ -144,7 +139,7 @@ body
 
 form
 {
-	width: 950px;
+	width: 675px;
 }
 
 input[type=text], textarea
@@ -226,7 +221,7 @@ input[type=submit]
 	transform: translateX(-50%);
 	padding: 18px;
 	font-family: Arial Black;
-	width: 950px;
+	width: 675px;
 	position: relative;
 	text-align: center;
 	border: none;
@@ -246,7 +241,7 @@ input[type=submit]
 	color: #4C408E;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 920px;
+	width: 645px;
 	padding: 0px 15px;
 	text-align: justify;
 	max-height: 0;
@@ -344,5 +339,11 @@ input[type=submit]
 .navbarwrapper-scrolled a:hover
 {
 	color: #b2aebc;
+}
+
+.fa-twitter 
+{
+	background: transparent;
+	color: white;
 }
 
