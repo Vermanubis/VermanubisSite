@@ -112,10 +112,10 @@
 			<div class="container2">
 				
 				<div id="compositiontext">
-					<p>I specialize in (but of course am not limited to) JRPG-style music of the 90s and 00s, which is to say, highly melodic and narrative-driven 
+					I specialize in (but of course am not limited to) JRPG-style music of the 90s and 00s, which is to say, highly melodic and narrative-driven 
 					music in the style of Final Fantasy, the Chrono series, Tales series and so on. What made these games special wasn’t just that 
 					their music was good; their music had an identity.
-					</p>
+				
 
 					<p>Likewise, my standard is to make music that is a selling point and integral part of the identity of the games I work on, not just 
 					pleasant but forgettable background noise. I strive to make music that will help your game become a cherished and
@@ -223,11 +223,13 @@
 				{% csrf_token %}
 				
 					<div id="messagefields">
-						<input type="text" id="message-name" name="message-name" placeholder="Your name?">
+						<input type="text" id="message-name" name="message-name" placeholder="Your name?" onfocus="this.placeholder=''" onblur="this.placeholder='Your name?'" required>
 
-						<input type="text" id="message-email" name="message-email" placeholder="Your email?">
+						<input type="text" id="message-email" name="message-email" placeholder="Your email?" 
+						onfocus="this.placeholder=''" onblur="this.placeholder='Your email?'" required>
 
-						<textarea id="message" name="message" placeholder="Write here..." style="height:200px"></textarea>
+						<textarea id="message" name="message" placeholder="Write here..."  onfocus="this.placeholder=''" onblur="this.placeholder='Write here...'"
+						style="height:200px" required></textarea>
 
 						<input type="submit" value="Message me!" style="font-family: Arial Black">	
 					</div>
