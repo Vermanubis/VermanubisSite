@@ -16,7 +16,9 @@ def contact(request):
         msg = EmailMessage(message_name, message, message_email, to=['vermanubis1@gmail.com'])
         msg.send()
         
-        return render(request, 'mainpage/contact.html', {'message_name' : message_name})
+        short_name = message_name.split();
+        
+        return render(request, 'mainpage/contact.html', {'short_name' : short_name[0]})
         
     else:
         return render(request, 'mainpage/contact.html', {})
