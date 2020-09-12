@@ -5,313 +5,37 @@
 	<head>
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="{% static 'mainpage\style.css' %}">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		
-			
-		<style>
-			.fa-twitter 
-			{
-				background: transparent;
-				color: white;
-			}
-		</style>
-	
-		
+		<link rel="stylesheet" type="text/css" href="{% static 'mainpage\contactstyle.css' %}">
+
 	</head>
 
 <body onload="document.body.style.opacity='1'">
 
-
-	<div class="navbar" id="navbar">
-		<div class="navbarwrapper" id="navbarwrapper">
-			<div class="navbarcontents">
-				<a href="#top">Home</a>
-				<a href="#musicbox">Music</a>
-				<a href="#what i do">What I Do</a>
-				<a href="#faq">FAQ</a>
-				<a href="#about">About</a>
-				<a href="#contact">Contact</a>	
-			
-				<a href="https://www.twitter.com/Vermanubis" style="font-size: 32px;" 
-				class="fa fa-twitter"></a>
-				<a href="https://vermanubis.bandcamp.com/" style="font-size: 32px;" 
-				class="fa fa-bandcamp"></a>
-			</div>
-		
-		</div>
-		
-	</div>
+	<!-- LOGO/HOME SECTION -->
 	
 	<a name="home">
 		<div id="parallax2">
-			<div class="container">
-				<div id="logo">
-					<h1>Vermanubis Music</h1>
-				</div>
+			<div id="logoflexbox">
+		
+		<!-- SHOW NOTICE MESSAGE -->
+		
 				<div id="sublogo">
-					<p>Game Composer</p>
+					<p id="sublogotext">
+					{% if message_name %} Hey, {{message_name}}. Thanks for the email. I'll get up with you shortly.
+					
+					{% else %} You got here by manually entering the URL didn't you? Naughty.
+					
+					{% endif %}</p>
+				</div>
+					
+				<div id="mainpagelink">
+					<a href="{% url 'mainpage' %}">Back to Main Page</a>
+				</div>
+				
 				</div>
 			</div>
 		</div>
-	</a>
-	
-	 <a name="musicbox">
 		
-		<div id="parallax3">
-			<div class="container">
-				<div class="header">
-					Music
-				</div>
-				
-				<div id="musictext">
-					<p>1. The Mount of All Creation.....(intrepid, determined)</p>
-					<p>2. Bygone Days and the Distant Shore.....(nostalgic, peaceful)</p>
-					<p>3. The Forest of Sleep and the Grotto of the Dream Fish.....(rainy, dreamy)</p>
-					<p>4. October Rust and the Beyondless Horizon.....(epic, adventurous)</p>
-					<p>5. The Storm That Broke the World in Two.....(snowy, dark)</p>
-					<p>6. Kriegsgeist.....(confident, battle theme)</p>
-					<p>7. The Ocean at the End of the Earth.....(bright, longing) </p>
-					<p>8. Prélude d'un Coeur Brisé.....(sentimental, bittersweet)</p>
-					<p>9. Le Ali della Redenzione.....(redemptive, proud)</p>
-					<p>10. Grief, My Sword.....(angry, sorrowful)</p>
-					<p>11. Hope, My Shield.....(hopeful, healing)</p>
-				</div> 
-				
-				<div id="musicplayer">
-					<iframe style="border: 0; width: 400px; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album=4108436490/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/track=3719625420/transparent=true/" 
-					seamless><a href="http://vermanubis.bandcamp.com/album/the-seventh-fonon">The Seventh Fonon by Vermanubis</a></iframe>
-				</div>	
-			</div>
-		</div>
 	</a>
-	
-	
-	<a name="what i do">
-		<div id="parallax4">
-			<div class="container">
-			
-				<div class="header">
-					<p>What I Do</p>
-				</div>
-				
-				<div id ="compositionheader">
-					<p>Composition</p>
-				</div>
-				
-				<div id="compositiontext">
-					<p>I specialize in (but of course am not limited to) JRPG-style music, which is to say, highly melodic and narrative-driven 
-					music in the style of Final Fantasy, the Chrono series, Tales series and so on. What made these games special wasn’t just that 
-					their music was good; their music had an identity.
-					</p>
-
-					<p>Likewise, my standard is to make music that is a selling point and integral part of the identity of the games I work on, not just 
-					inoffensive but forgettable background noise. I strive to make music that will help your game become a cherished and
-					significant emotional experience for its players.
-					</p>
-				</div>
-				
-				<div id ="arrangementheader">
-					<p>Arrangement</p>
-				</div>
-				
-				<div id="arrangementtext">
-					<p>Do you have a song you've written that you'd like arranged for as a solo piano, orchestral or even symphonic rock piece,
-						but lack either the time or skills to do so?
-					</p>
-
-					<p>I can help with that.
-					</p>
-				</div>
-			</div>
-		</div>
-	</a>
-	
-	<a name="faq">
-		<div id="parallax5"> 
-			<div class="container">
-				<div class="header">
-					<p>FAQ</p>
-				</div>
-				<button class="accordion">Q: “How do I know I’ll get exactly what I’m looking for?”</button>
-					<div class="panel">
-						<p><b>A:</b> Of course, liking what you heard in the Music section above is a great start, 
-						but it’s good to have a guarantee that I’ll nail what you’re looking for. Sometimes
-						the vision of what you want is a little blurry and takes some time to suss out, and that’s okay! 
-						I'll figure out what you're looking for by keeping in frequent contact, even if you know nothing about music and have a difficult time
-						communicating exactly what you want.
-						</p>
-					</div>
-
-				<button class="accordion">Q: “What are your prices/how do you pricing?”</button>
-					<div class="panel">
-						<p>A: It's very difficult to give a flat rate because projects vary so wildly, but
-						I’m very flexible with pricing as well as pricing models, and we’ll talk both out right at the start 
-						so you don’t have to wake up in cold sweats at night wondering about costs. If pay-per-minute freaks 
-						you out a bit, I’m happy to do — and personally quite like — the pay-per-project model. Whatever the model, however, 
-						I take deeply personal pride in the quality of my music, so my concern is making music that’s everything 
-						it should be over optimizing my time:money ratio.</p>
-					</div>
-
-				<button class="accordion">Q: “What genres can you do?”</button>
-					<div class="panel">
-						<p>A: Just about any, but my specialties are symphonic and prog rock, world and orchestral. 
-						Think Nobuo Uematsu and Motoi Sakuraba (of Final Fantasy and Tales/Souls series fame) 
-						for symphonic/prog rock and orchestral, and Yasunori Mitsuda (of Chrono/Xeno series fame) for world if
-						you're unfamiliar.</p>
-					</div>
-					
-				<button class="accordion">Q: “What if I want something that sounds more like older games and less like a live orchestra?”</button>
-					<div class="panel">
-						<p>A: In my music demo, the songs are produced with live orchestral samples, but this sound has less to do with the
-						music itself and more with the soundfont. I can adjust my compositions to any soundfont you think will fit your game, be it 
-						something like the old SNES soundfonts or live orchestra samples.</p>
-					</div>
-					
-				<button class="accordion">Q: “Can I hire you for individual commissions/songs?”</button>
-					<div class="panel">
-						<p>A: You certainly can! Prices vary depending on a variety of factors, so just get up with me through the contact form at the
-						bottom of the page so we can talk about what you need and the details of pricing. </p>
-					</div>
-			</div>
-		</div>
-	</a>
-
-	<a name="about">
-		<div id="parallax6">
-			<div class="container">
-				<div class="header">
-					<p>About<p>
-				</div>
-					
-				<div id="aboutphotocontainer"></div>
-				
-				<div id="aboutmetext">
-					<p>My name’s Geoff Butterworth, also known as Vermanubis, and it’s a pleasure to meet you. </p>
-					
-					<p>Game music has been my life since I was 5 years old 
-					when I would play all the way through Final Fantasy: Mystic Quest just to jam to the final dungeon theme.
-					As I got older, I started to realize that game music got into my heart and made me feel in ways
-					no other kind of music came close to.
-					</p>
-					
-					<p>Since about that age it's been my life's work to understand and perfect what makes game music so special
-					and to get others to feel what my most beloved games made me feel in my own work. If you can see that fact 
-					reflected in my work and want music that will stay with your players forever, I can't overstate
-					how happy I'd be to oblige and work with you to make something that'll mean something to people.
-					</p>
-				</div>
-			</div>
-				
-		</div>
-	</a>
-	
-	<a name="contact">
-		<div id="parallax7">
-			<div class="container">
-				<div class="header">
-					<p>Contact</p>
-				</div>
-				
-					<form action="{% url 'contact' %}#contact" method="post" style="margin: 0">
-					{% csrf_token %}
-					
-						<div id="messagefields">
-
-							<input type="text" id="message-name" name="message-name" placeholder="Your name?">
-
-							<input type="text" id="message-email" name="message-email" placeholder="Your email?">
-
-							<textarea id="message" name="message" placeholder="Write here..." style="height:200px"></textarea>
-
-							<input type="submit" value="Message me!" style="font-family: Arial Black">
-							
-						</div>	
-						
-						<div id="contacttext">
-							<p>Since about that age it's been my life's work to understand and perfect what makes game music so special
-							and to get others to feel what my most beloved games made me feel in my own work. If you can see that fact 
-							reflected in my work and want music that will stay with your players forever, I can't overstate
-							how happy I'd be to oblige and work with you to make something that'll mean something to people.
-							</p>
-						</div>
-					</form>
-			</div>
-		</div>
-	</a>
-
-	
-	<script>
-	var myNav = document.getElementById('navbar');
-	var myNavWrap = document.getElementById('navbarwrapper');
-	var mySocialWrap = document.getElementById('socialwrapper');
-	window.onscroll = function () 
-	{	 
-		"use strict";
-		if (document.body.scrollTop >= 100 || document.documentElement.scrollTop >= 100 )
-		{
-			myNav.classList.add("navbar-scrolled");
-			myNav.classList.remove("navbar");
-			myNavWrap.classList.add("navbarwrapper-scrolled");
-			myNavWrap.classList.remove("navbarwrapper");
-		} 
-		else 
-		{
-			myNav.classList.add("navbar");
-			myNav.classList.remove("navbar-scrolled");
-			myNavWrap.classList.add("navbarwrapper");
-			myNavWrap.classList.remove("navbarwrapper-scrolled");
-			
-		}
-	};
-	
-	var acc = document.getElementsByClassName("accordion");
-	var i;
-	var activePanel = null;
-
-	for (i = 0; i < acc.length; i++) 
-	{
-	
-	  acc[i].onclick = function() 
-	  {
-		if(activePanel == this)
-		{
-			toggleItem(activePanel);
-			activePanel = null;
-			return;
-		}
-
-		if(activePanel != null)
-		{
-			toggleItem(activePanel);
-		}
-
-		toggleItem(this);
-		activePanel = this;
-	  
-	  }
-	}
-	  	  
-	  function toggleItem(item)
-	  {
-		item.classList.toggle("active");
-		
-		/* Toggle between hiding and showing the active panel */
-		var panel = item.nextElementSibling;
-		
-		if (panel.style.maxHeight != 0) //panel is open, now close it
-		{
-			panel.style.maxHeight = null;
-		} 
-		else //panel is closed, now open it
-		{
-			panel.style.maxHeight = panel.scrollHeight + "px";
-		}
-	  };
-	
-	</script>
-	
 </body>
 </html>
