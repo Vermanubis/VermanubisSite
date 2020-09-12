@@ -83,6 +83,7 @@ body
 	font-size: 18px;
 	text-align: justify;
 	width: 675px;
+	height: 700px;
 	overflow-y: auto;
 }
 
@@ -162,10 +163,20 @@ body
   font-size: 18px;
   padding: 8px 12px;
   position: absolute;
-  bottom: -40px;
+  bottom: -65px;
   left: -5px;
   width: 100%;
   text-align: center;
+}
+
+.slideposition
+{
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  
 }
 .prev, .next 
 {
