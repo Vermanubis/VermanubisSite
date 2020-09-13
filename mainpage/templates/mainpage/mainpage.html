@@ -162,9 +162,12 @@
 					<div class="panel">
 						<p><b>A:</b> Of course, liking what you heard in the Music section above is a great start, 
 						but it’s good to have a guarantee that I’ll nail what you’re looking for. Sometimes
-						the vision of what you want is a little blurry and takes some time to suss out, and that’s okay! 
-						I'll figure out what you're looking for by keeping in frequent contact, even if you know nothing about music and have a difficult time
-						communicating exactly what you want.
+						the vision of what you want is a little blurry and takes some time to suss out, and that’s okay!</p>
+						
+						<p>
+						I'll figure out what you're looking for by keeping in frequent contact. Even if you know nothing about music and have a difficult time
+						communicating what you want, I both know how to translate non-technical spitballing into music as well as have a huge library
+						of references to draw from to confirm I'm on the right track.
 						</p>
 					</div>
 
@@ -312,13 +315,14 @@
 				{% csrf_token %}
 				
 					<div id="messagefields">
-						<input type="text" id="message-name" name="message-name" placeholder="Your name?" onfocus="this.placeholder=''" onblur="this.placeholder='Your name?'" required>
+						<input type="text" id="message-name" name="message-name" placeholder="Your name?" onfocus="this.placeholder=''" onblur="this.placeholder='Your name?'" 
+						maxlength="50" required>
 
 						<input type="text" id="message-email" name="message-email" placeholder="Your email?" 
-						onfocus="this.placeholder=''" onblur="this.placeholder='Your email?'" required>
+						onfocus="this.placeholder=''" onblur="this.placeholder='Your email?'" maxlength="50" required>
 
 						<textarea id="message" name="message" placeholder="Write here..."  onfocus="this.placeholder=''" onblur="this.placeholder='Write here...'"
-						style="height:200px" required></textarea>
+						style="height:200px" maxlength="2000" required></textarea>
 
 						<input type="submit" value="Message me!" style="font-family: Arial Black">	
 					</div>
