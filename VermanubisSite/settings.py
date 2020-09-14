@@ -135,6 +135,8 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 #import django_heroku
 #django_heroku.settings(locals())
 
