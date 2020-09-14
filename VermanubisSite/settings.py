@@ -30,7 +30,7 @@ SECRET_KEY = 'f(tf0qth(-6_oy9b0%6)i-%#f3jspafg4srdz81*!$h%b_*=*x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -135,7 +135,7 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
-#import django_heroku
-#django_heroku.settings(locals())
+import django_heroku
+django_heroku.settings(locals())
 
 
