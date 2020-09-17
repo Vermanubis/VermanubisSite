@@ -120,7 +120,7 @@ body
 .aboutphotos
 {
 	width: 25vw; 
-	height: 400px; 
+	height: 40vh; 
 	border-radius: 5%
 }
 
@@ -129,34 +129,11 @@ body
 	display: none;
 }
 
-.fade 
-{
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade 
-{
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade 
-{
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
 .caption
 {
   color: #f2f2f2;
   font-size: 18px;
-  padding: 8px 12px;
   position: absolute;
-  bottom: -65px;
-  left: -5px;
   width: 100%;
   text-align: center;
 }
@@ -231,7 +208,7 @@ textarea
 
 input[type=submit]
 {
-	font-size: 0.83vw;
+	font-size: 16px;
 	padding: 0.83vw 3.3vh;
 	background-color: #4C408E;
 	color: #f2f2f2;
@@ -266,7 +243,6 @@ input[type=submit]:hover
 .header
 {
 	transform: translate(0%, 100px);
-	margin-top: 0px;
 	display: flex;
 	width: 100vw;
 	color: #F2F2F2;
@@ -485,7 +461,7 @@ input[type=submit]:hover
 
 	.aboutphotos
 	{
-		width: 65vw; 
+		width: 50vw; 
 		height: 40vh; 
 	}
 
