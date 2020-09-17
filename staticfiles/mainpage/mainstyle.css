@@ -403,6 +403,7 @@ input[type=submit]:hover
 {
 	body
 	{
+		background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/T7F.jpg");
 		background-position: 70% 50%;
 		background-attachment: scroll;
 		background-size: 3000px 6500px;
@@ -411,7 +412,7 @@ input[type=submit]:hover
 
 /*******HOME*******/
 
-@media only screen and (max-device-width: 800px) 
+@media only screen and (max-width: 800px) 
 {
 	#logo
 	{
