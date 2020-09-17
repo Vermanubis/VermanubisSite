@@ -13,19 +13,10 @@ body
 	background-size: cover;
 	opacity: 0; 
 	transition: opacity 2s; 
-	font-family: Arial Black;
+	font-family: Arial Black, Arial Bold;
 	margin: 0;
 	overflow-x: hidden;
 } 
-
-@media only screen and (max-device-width: 480px) 
-{
-	body
-	{
-		background-attachment: scroll;
-	}
-
-}
 
 /*******HOME*******/
 	
@@ -63,7 +54,7 @@ body
 #musictext
 {
 	color: #F2F2F2;
-	height: 560px;
+	height: 530px;
 	overflow-y: auto;
 	font-size: 18px;
 	transform: translate(0%, 100px);
@@ -71,8 +62,9 @@ body
 
 #musicplayer
 {
-	transform: translate(0%, 100px);	
+	transform: translate(0%, 100px);
 }
+
 
 /*******WHATIDO*******/
 
@@ -82,9 +74,9 @@ body
 	color: #F2F2F2;
 	font-size: 18px;
 	text-align: justify;
-	width: 675px;
+	width: 35%;
 	height: 700px;
-	overflow-y: auto;
+	overflow: auto;
 }
 
 /*******FAQ*******/
@@ -110,8 +102,8 @@ body
 
 .aboutphotocontainer
 {
-	transform: translate(-38%, 100px);
-	height: 400px;
+	transform: translate(-35%, 100px);
+	height: 41vh;
 }
 
 #aboutmetext
@@ -127,9 +119,9 @@ body
 
 .aboutphotos
 {
-	width:470px; 
-	height:400px; 
-	border-radius: 5%
+	width: 25vw; 
+	height: 40vh; 
+	border-radius: 5%;
 }
 
 .slidepic
@@ -137,34 +129,11 @@ body
 	display: none;
 }
 
-.fade 
-{
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade 
-{
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade 
-{
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
 .caption
 {
   color: #f2f2f2;
   font-size: 18px;
-  padding: 8px 12px;
   position: absolute;
-  bottom: -65px;
-  left: -5px;
   width: 100%;
   text-align: center;
 }
@@ -183,7 +152,6 @@ body
   cursor: pointer;
   position: absolute;
   top: 50%;
-  right: 91%;
   width: auto;
   padding: 16px;
   margin-top: -22px;
@@ -216,7 +184,7 @@ body
 
 form
 {
-	width: 675px;
+	width: 35%;
 }
 
 input[type=text], textarea
@@ -240,7 +208,7 @@ textarea
 
 input[type=submit]
 {
-	font-size: 0.83vw;
+	font-size: 16px;
 	padding: 0.83vw 3.3vh;
 	background-color: #4C408E;
 	color: #f2f2f2;
@@ -258,7 +226,7 @@ input[type=submit]:hover
 {
 	transform: translate(25%, 48px);
 	height: 62%;
-	width: 66.4%;
+	width: 66.4vw;
 	display: flex;
 	justify-content: space-between;
 }
@@ -272,11 +240,9 @@ input[type=submit]:hover
 	justify-content: center;
 }
 
-
 .header
 {
 	transform: translate(0%, 100px);
-	margin-top: 0px;
 	display: flex;
 	width: 100vw;
 	color: #F2F2F2;
@@ -424,9 +390,136 @@ input[type=submit]:hover
 	color: #b2aebc;
 }
 
-.fa-twitter 
+.fa-twitter, .fa-bandcamp
 {
 	background: transparent;
 	color: white;
+	font-size: 1.6vw;
 }
 
+/************************************SMALL MEDIA******************************************/
+
+@media only screen and (max-device-width: 800px) 
+{
+	body
+	{
+		background-position: 70% 50%;
+		background-attachment: scroll;
+		background-size: 3000px 6500px;
+	}
+}
+
+/*******HOME*******/
+
+@media only screen and (max-device-width: 800px) 
+{
+	#logo
+	{
+		font-size: 6vw;
+	}
+
+	#sublogo
+	{
+		font-size: 4.5vw;
+	}
+
+/*******MUSIC*******/
+
+	#musictext
+	{
+		display: none;
+	}
+
+	.musicbox
+	{
+		width: 65vw;
+	}
+
+/*******WHATIDO*******/
+
+	#compositiontext
+	{
+		width: 65vw;
+		font-size: 3vw;
+	}
+
+/*******ABOUT*******/
+
+	.aboutphotocontainer
+	{
+		transform: translate(0%, 100px);
+		height: 41vh;
+	}
+
+	#aboutmetext
+	{
+		transform: translate(0%, 80%);
+		width: 65vw; 
+		font-size: 3vw;
+		height: 30vh; 
+	}
+
+	.aboutphotos
+	{
+		width: 50vw; 
+		height: 40vh; 
+	}
+
+	.caption
+	{
+		display: none;
+	}
+
+/*******CONTACT*******/
+
+	form
+	{
+		width: 65vw;
+	}
+
+	.container
+	{
+		transform: translate(27%, 48px);
+		height: 62%;
+		width: 65vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.header
+	{
+		font-size: 10vw;
+		text-align: center;
+	}
+
+	.accordion
+	{
+		font-size: 3vw;
+		width: 65vw;
+	}
+
+	.panel
+	{
+		font-size: 3vw;
+		width: 57vw;
+	}
+
+/*******NAVBAR*******/
+
+	.navbarcontents
+	{
+		width: 65vw;
+	}
+
+	.navbarwrapper a
+	{
+		font-size: 2vw;
+	}
+
+	.navbarwrapper-scrolled a
+	{
+		font-size: 2vw;
+	}	
+}

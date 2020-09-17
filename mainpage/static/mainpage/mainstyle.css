@@ -102,7 +102,7 @@ body
 
 .aboutphotocontainer
 {
-	transform: translate(-36%, 100px);
+	transform: translate(-35%, 100px);
 	height: 41vh;
 }
 
@@ -121,7 +121,7 @@ body
 {
 	width: 25vw; 
 	height: 40vh; 
-	border-radius: 5%
+	border-radius: 5%;
 }
 
 .slidepic
