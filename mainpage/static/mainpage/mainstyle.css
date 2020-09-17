@@ -13,7 +13,7 @@ body
 	background-size: cover;
 	opacity: 0; 
 	transition: opacity 2s; 
-	font-family: Arial Black;
+	font-family: Arial Black, Arial Bold;
 	margin: 0;
 	overflow-x: hidden;
 } 
@@ -411,7 +411,7 @@ input[type=submit]:hover
 
 /*******HOME*******/
 
-@media only screen and (max-width: 800px) 
+@media only screen and (max-device-width: 800px) 
 {
 	#logo
 	{
