@@ -35,7 +35,7 @@
 	
 	<a name="home">
 		<div id="parallax2">
-			<div id="logoflexbox">
+			<div id="logocontainer">
 		
 		{% if message_name %} 
 		
@@ -75,7 +75,7 @@
 				<div class="header"> 
 					Music
 				</div>
-			<div class="container">
+			<div class="container-spaced">
 			
 				<div id="musictext">
 					1. The Mount of All Creation.....(intrepid, determined)<span style="color:red">***</span>
@@ -93,7 +93,7 @@
 				</div> 
 				
 				<div id="musicplayer">
-					<iframe class="musicbox" style="width:20vw; height:530px; border:0" src="https://bandcamp.com/EmbeddedPlayer/album=4108436490/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/track=3719625420/transparent=true/" 
+					<iframe src="https://bandcamp.com/EmbeddedPlayer/album=4108436490/size=large/bgcol=ffffff/linkcol=4C408E/artwork=small/track=3719625420/transparent=true/" 
 					seamless><a href="http://vermanubis.bandcamp.com/album/the-seventh-fonon">The Seventh Fonon by Vermanubis</a></iframe>
 				</div>
 			</div>
@@ -107,21 +107,20 @@
 				<div class="header">
 					What I Do
 				</div>
-			<div class="container2">	
+			<div class="container-center">	
 				<div id="compositiontext">
 					I specialize in composing melodic, narrative-driven and  what I call "active" music in the style of classic JRPGs such as
 					Final Fantasy, the Chrono series, Tales series and those like them. What made these games special wasn’t just that 
 					their music was good; their music was a pillar of their worlds and stories. 
 					
-					<p>That said, music can take either a passive or active role in world-building and storytelling. Passive music, like the kind you find
-					in many films (and is increasingly prevalant in games), suits the scene very well, but is quickly forgotten; it describes moments as they happen. Active music, on the other hand,
+					<p>Music can take either a passive or active role in world-building and storytelling. Passive music, like the kind you find
+					in many films (and is increasingly prevalant in games), may suit the scene very well, but is quickly forgotten; it describes the "facts" of a scene. Active music, on the other hand,
 					paints a vivid mental picture for the listener and excites their imagination; it tells stories. This is the kind of music that carved the legacies of these
-					classic series and fully realized worlds, 
-					characters and stories with only 16-bit bardware.</p>
+					classic series and fully realized worlds, characters and stories even under strict hardware limitations, and is the style and tradition in which I'm firmly planted.</p>
 					
-					<p>My bottom line isn't just to make fitting but quickly-forgotten background filler, but rather to make music that is a 
+					<p>That said, my bottom line isn't just to make fitting but quickly-forgotten background filler, but rather to make music that is a 
 					selling point and integral part of the identity of the games I work on. Good-enough music is easy to come by, but music that drives players to 
-					YouTube anywhere from days to years later to relive the game and their memories with its music is a good bit trickier to find.</p>
+					YouTube anywhere from days to decades later to relive the world and story with its music is a good bit trickier to find.</p>
 					
 					<p>It's said that true joy is composed of a tear and a smile, and when that "YouTube" day comes for someone, anything less won't do.</p>
 
@@ -146,7 +145,8 @@
 						<p><b>A:</b> These are just terms I use to describe the differences I perceive among different kinds of music.
 						Very generally speaking,
 						"passive" music is the kind you often hear in films: fitting, but a bit forgettable because it tends to blend into the backdrop unnoticed. In a sense, passive music
-						is like a literal account of facts while "active" music, on the other hand, is more like telling a story around a campfire.<p>
+						is like a literal account of facts while "active" music, on the other hand, is more like telling a story around a campfire. Facts are informative, but stories
+						give a sense of scope and meaning.<p>
 						
 						<p>Put another way, you could say that passive music makes little sense by itself, or that 
 						it seems incomplete out of its original context, while active music
@@ -166,7 +166,7 @@
 						<p>
 						Even if you know nothing about music and have a difficult time
 						communicating what you want, I know how to translate even the vaguest ideas into music, accurately identify even the vaguest wishes, and have a huge library
-						of references to draw from so we can agree on a concrete frame of reference for musical direction if need be.
+						of references to draw from to help clients identify exactly what they want without having to settle because of difficulty verbalizing specifics.
 						</p>
 					</div>
 
@@ -203,7 +203,7 @@
 					
 				<button class="accordion">Q: “What separates you from other composers?”</button>
 					<div class="panel">
-						<p>A: This is probably something my music and my general philosophies I briefly spoke about above could answer best.
+						<p>A: This is probably something my music and philosophy I briefly spoke about above could answer best.
 						From a practical point of view though, I'm a thorough and effective communicator, methodical, consistent, flexible with pricing and hopelessly devoted to my craft.
 						</p>
 					</div>
@@ -218,7 +218,7 @@
 				<div class="header">
 					About
 				</div>
-			<div class="container">
+			<div class="container-spaced">
 				<div class="aboutphotocontainer">
 					<div class="slidepic fade">
 						<div class="slideposition">1 / 10</div>
@@ -286,7 +286,7 @@
 					make it your purpose in life.
 					</p>
 					
-					<p>Since about that age it's been my life's work to get others to feel what my most beloved games made me feel through my own work. 
+					<p>Since about that age it's been my life's work to communicate my most beloved memories and sentiments from games to others through my own work. 
 					If you can see that fact reflected in my music and want music that will cast your story and world in stone, it's hard to overstate
 					what a pleasure it'd be to help you make a game that'll mean as much to others as my favorite games mean to me.
 					</p>
@@ -306,7 +306,7 @@
 				Contact
 			</div>
 			
-			<div class="container2">
+			<div class="container-center">
 				<form action="{% url 'contact' %}" method="post" style="margin: 0; padding: 0;">
 				{% csrf_token %}
 				
@@ -320,7 +320,7 @@
 						<textarea id="message" name="message" placeholder="Your message..."  onfocus="this.placeholder=''" onblur="this.placeholder='Write here...'"
 						style="height:200px" maxlength="3000" required></textarea>
 
-						<input type="submit" value="Message me!" style="font-family: Arial Black">	
+						<input type="submit" value="Send message" style="font-family: Arial Black">	
 					</div>
 				</form>
 			</div>
