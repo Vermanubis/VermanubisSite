@@ -175,7 +175,8 @@
 						<p>A: It's a little difficult to give a flat rate because projects vary so wildly, but
 						I’m very flexible with pricing as well as pricing models, and we’ll talk both out right at the start 
 						so you don’t have to wake up in cold sweats at night wondering about costs. If pay-per-minute freaks 
-						you out a bit, I’m happy to do — and personally quite like — pay-per-project. If you're unsure,
+						you out a bit, I’m happy to do — and personally quite like — pay-per-project. Beyond that, if you think
+						I'm perfect for the job but don't have much of a budget, we can also talk about a revenue share option. If you're unsure,
 						I'd be glad to give you a rundown of the pros/cons of each. Whatever the model though, 
 						the quality of my music is a deeply personal matter to me, so my concern is making music that will 
 						carve a lasting legacy for games; not optimizing my time:money ratio.</p>
@@ -338,6 +339,15 @@
 	
 <script>
 
+	$(document).ready(function(){
+			$.getJSON("http://files.olo.com/pizzas.json", function(result){
+				$.each(result, function(i, field){
+					console.log(field)
+				});
+			});
+		});
+	;
+
 	var slideIndex = 1;
 	showSlides(slideIndex);
 
@@ -354,7 +364,7 @@
 	function showSlides(n) 
 	{
 		var i;
-		var slides = document.getElementsByClassName("slidepic");
+		var slides = document.getElementsByClassName("slidepic"); 
 		if (n > slides.length) 
 		{
 			slideIndex = 1
@@ -429,6 +439,6 @@
 	};
 	
 </script>
-	
+
 </body>
 </html>
